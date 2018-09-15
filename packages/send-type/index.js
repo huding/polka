@@ -24,5 +24,5 @@ module.exports = function (res, code=200, data='', headers={}) {
 	headers['Content-Length'] = Buffer.byteLength(data);
 
 	res.writeHead(code, headers);
-	res.end(data);
+	return res.end(data);
 }
